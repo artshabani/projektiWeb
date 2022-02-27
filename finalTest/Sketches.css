@@ -1,0 +1,396 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+} /* Default- per mos me pas hapsira */
+
+.headeri {
+  min-height: 74px;
+  position: relative;
+  background-position: center;
+  z-index: 9999;
+}
+
+nav {
+  height: 80px; /* gjatsia e nav-barit */
+  width: 100%; /* gjersia e nav-barit */
+  background-color: #c03d6d; /*ngjyra e navit*/
+  opacity: 0.95; /* dukshmeria e navit */
+  position: fixed;
+}
+
+nav ul {
+  float: right; /* listat n djatht */
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 7px 13px;
+  border-radius: 7px;
+  opacity: 1;
+  transition: background 0.4s ease-in; /* mos miju hek butonav meniher ngjyra masi tdel prej hoverit */
+}
+
+a.active {
+  color: #192231; /* nqat faqe qe je (home) butoni gjithmon me ngjyre */
+}
+a:hover {
+  color: #192231; /*#5576af;*/ /* ngjyra kur tbojsh hover */
+  transition: 0.7s;
+}
+
+label.drkart {
+  color: white; /* pjesa e logos  */
+  font-size: 35px;
+  padding: 0 50px;
+  font-weight: bold;
+  line-height: 80px;
+  font-weight: bold;
+  opacity: 1;
+  transition: color 0.3s ease-in; /* masi ta heksh mausin qe mos mu hek ngjyra e hoverit meniher */
+}
+
+label.drkart:hover {
+  /* ndrrimi i ngjyres se logos kur tbojsh hover  */
+  color: #192231;
+  transition: 0.5s;
+}
+
+body {
+  font-family: Poppins, sans-serif; /* fonti i kejt faqes */
+  height: auto;
+}
+
+.checkbtn {
+  /* butoni me 3vija (displaynone), shfaqet pasi tzvoglohet rezulucioni i faqes (media query) */
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 120px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none; /* me mshef butonin qe del si pasoje e thirrjes se labelit check */
+}
+
+@media (max-width: 1110px) {
+  .checkbtn {
+    display: block; /* shfaqja e butonit me 3 vija pasi te zvogelohet rezulucioni */
+    line-height: 82px;
+    font-size: 32px;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #2c3e50; /* formatimi i dukjes se listes pasi te zvogelohet rezulucioni */
+    text-align: center;
+    top: 80px;
+    left: -100%;
+    transition: all 1.2s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 15px 0;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover,
+  a.active {
+    background-color: #2c3e50;
+    color: #26bfee;
+    transition: 0.01s;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+/*==========================================================================*/
+
+.container {
+  height: auto;
+  background-color: #192231;
+}
+
+.kategorite {
+  height: 15vh;
+  width: 100%;
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #192231;
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: bold;
+  color: white;
+}
+
+.kategorite a:hover {
+  color: #c03d6d;
+  transition: 0.1s;
+}
+
+.art {
+  padding-top: 21px;
+  width: 26%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.art a li {
+  display: inline-block;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+.art li {
+  transition: 0.5s;
+}
+
+.art li:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.art img {
+  width: 100px;
+  height: 100px;
+}
+
+.art img:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.art {
+  display: flex;
+  align-items: center;
+}
+
+.phcontainer {
+  width: 90%;
+  height: auto;
+  margin-left: 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.img img {
+  height: 540px;
+  width: 355px;
+  object-fit: cover;
+}
+
+.img p {
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1.2px;
+  padding-top: 3px;
+}
+.img {
+  padding-bottom: 25px;
+  position: relative;
+}
+
+.image {
+  display: block;
+  width: 100%;
+}
+
+.image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 87.8%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  border: 0.1px solid #26bfee;
+  border-radius: 3px;
+  transition: opacity 0.9s;
+}
+
+.image__overlay:hover {
+  opacity: 1;
+}
+
+.image__overlay--blur {
+  backdrop-filter: blur(5px);
+}
+
+.image__title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.image__description {
+  font-size: 1.25em;
+  margin-top: 0.25em;
+}
+
+.views {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: auto;
+}
+
+.views p {
+  color: white;
+  font-weight: bold;
+  width: fit-content;
+  transition: 0.7s color;
+}
+
+.views p:hover {
+  color: #c03d6d;
+  transition: 0.7s;
+}
+
+.pagebuttons {
+  width: 5%;
+  margin-left: 47.5%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagebuttons button {
+  width: 40px;
+  height: 40px;
+  background-color: #c03d6d;
+  border: 1px solid white;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+  display: block;
+  transition: background 0.45s;
+}
+
+button.active {
+  background-color: #26bfee;
+}
+
+button:hover {
+  background-color: #26bfee;
+  transition: 0.45s;
+}
+
+.credits {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.credits p {
+  color: rgb(250, 250, 0);
+  font-weight: 599;
+  font-family: Poppins, sans-serif;
+  transition: color 0.5s;
+}
+
+.credits p:hover {
+  color: #c03d6d;
+  transition: 0.5s;
+}
+
+footer {
+  background: #2c3e50;
+  height: auto;
+  width: 100vw;
+  font-family: "Open Sans";
+  padding-top: 40px;
+  color: #fff;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3 {
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: bold;
+  color: white;
+}
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 20px;
+  font-size: 14px;
+}
+.social {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+.social li {
+  margin: 0 10px;
+}
+.social a {
+  text-decoration: none;
+  color: #fff;
+}
+.social img {
+  width: 45px;
+  height: 45px;
+}
+
+.footer-bottom {
+  background: #2c3e50;
+  width: 100vw;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer-bottom p {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background-color: #2c3e50;
+  transition: color 0.5s;
+  font-size: 16px;
+}
+.footer-bottom p:hover {
+  color: #c03d6d;
+  transition: 0.5s;
+}
+
+.sketches {
+  color: #c03d6d;
+}

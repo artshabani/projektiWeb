@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../fotot/vayne.png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: rgba(44, 62, 80, 0.6);
+  width: 400px;
+  max-width: 100%;
+}
+
+.header {
+  padding: 20px 40px;
+  border-bottom: 1px solid #c03d6d;
+  background-color: rgba(44, 62, 80, 0.6);
+}
+
+.header h2 {
+  color: white;
+  text-align: center;
+  font-weight: 300;
+  transition: color 0.6s;
+}
+
+.header:hover h2 {
+  color: #c03d6d;
+  transition: 0.6s;
+}
+
+.header:hover ~ .form {
+  color: #26bfee;
+  transition: 0.6s;
+}
+.form:hover {
+  color: #26bfee;
+  transition: 0.6s;
+  font-weight: 300;
+  transition: color 0.6s;
+}
+
+::placeholder {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.form:hover ::placeholder {
+  color: #c03d6d;
+  transition: 0.6s;
+  font-weight: 350;
+}
+
+.form {
+  padding: 30px 40px;
+  color: white;
+  transition: color 0.6s;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 3.1px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+#i {
+  position: absolute;
+  top: 43px;
+  right: 10px;
+  visibility: hidden;
+}
+
+#circle {
+  position: absolute;
+  top: 43px;
+  right: 10px;
+  visibility: hidden;
+}
+
+#exclamation {
+  position: absolute;
+  top: 44px;
+  right: 10px;
+  visibility: hidden;
+}
+
+.form-control.success #circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.form-control.error #exclamation {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control.error small {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+button {
+  background-color: #2c3e50;
+  color: white;
+  border: 2px solid #2c3e50;
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: color 0.6s;
+}
+
+button:hover {
+  color: #c03d6d;
+  transition: 0.6s;
+}
+
+.logoo {
+  height: auto;
+  width: auto;
+  position: absolute;
+  left: 0;
+  top: 0%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.logoo img {
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.logoo img:hover {
+  transform: scale(1.05);
+  transition: 0.05s;
+}

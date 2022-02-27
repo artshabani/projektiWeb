@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" media="screen" href="Login.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+      integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Ubuntu:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="logoo">
+      <a href="HomePage.html"><img src="../logos/logo2.png" /></a>
+    </div>
+
+    <div class="container">
+      <div class="header">
+        <h2>Create Account</h2>
+      </div>
+      <form id="form" class="form">
+        <div class="form-control">
+          <label for="username">Username</label>
+          <input type="text" placeholder="Username" id="username" />
+          <i id="circle" class="fas fa-check-circle"></i>
+          <i id="exclamation" class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="username">Password</label>
+          <input type="password" placeholder="Password" id="password" />
+          <i id="circle" class="fas fa-check-circle"></i>
+          <i id="exclamation" class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <button>Submit</button>
+      </form>
+    </div>
+
+    <script src="Login.js"></script>
+  </body>
+</html>
